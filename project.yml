@@ -1,0 +1,32 @@
+name: ChatTranscriber
+options:
+  bundleIdPrefix: com.bman321123
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: ""   # pick your Personal Team in Xcode > Signing & Capabilities
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  ChatTranscriber:
+    type: application
+    platform: iOS
+    sources:
+      - path: ChatTranscriber
+      - path: Core
+    settings:
+      base:
+        PRODUCT_NAME: ChatTranscriber
+        PRODUCT_BUNDLE_IDENTIFIER: com.bman321123.chattranscriber
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Chat → Text
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
